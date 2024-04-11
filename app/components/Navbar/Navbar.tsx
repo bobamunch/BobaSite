@@ -1,15 +1,20 @@
 import React from "react";
-import { Box, Header, Nav } from "grommet";
-
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Link } from "@remix-run/react";
 
 export default function Navbar() {
   return (
-    <Header>
-      <Nav direction="row">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/calendar"}>Calendar</Link>
-      </Nav>
-    </Header>
+    <NavigationMenu.Root>
+      <NavigationMenu.Item>
+        <NavigationMenu.Trigger>
+          <Link to={"/"}>Home</Link>
+        </NavigationMenu.Trigger>
+      </NavigationMenu.Item>
+      <NavigationMenu.Item>
+        <NavigationMenu.Trigger>
+          <Link to={"/calendar"}>Calendar</Link>
+        </NavigationMenu.Trigger>
+      </NavigationMenu.Item>
+    </NavigationMenu.Root>
   );
 }

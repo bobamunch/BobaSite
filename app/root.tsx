@@ -1,16 +1,22 @@
 import Footer from "./components/Footer/Footer";
-import { Grommet } from "grommet";
 import Navbar from "./components/Navbar/Navbar";
-import { Outlet } from "@remix-run/react";
+import { Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
 import "~/styles/index.css";
 
 export default function App() {
   return (
-    <Grommet>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </Grommet>
+    <html lang="utf-8">
+      <head>
+        <Meta />
+      </head>
+      <body>
+        <Navbar />
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        <Footer />
+      </body>
+    </html>
   );
 }
