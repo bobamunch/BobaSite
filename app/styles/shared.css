@@ -89,6 +89,7 @@ footer > small {
 }
 
 .footer__icon {
+  color: rgb(229, 163, 99); /* overrides styling of Link element */
   margin-left: 2px;
   margin-right: 2px;
 }
