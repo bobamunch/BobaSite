@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header>
       <div className="header__title">
-        <h1>Boba Munch</h1>
+        <h1>BOBA Munch</h1>
       </div>
 
       <NavigationMenu.Root className="header__navbar_root">
