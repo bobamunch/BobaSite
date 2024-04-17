@@ -3,8 +3,8 @@ import * as Separator from "@radix-ui/react-separator";
 export default function About() {
   return (
     <>
-      <div>
-        <h1>What is BOBA Munch?</h1>
+      <main>
+        <h2>What is BOBA Munch?</h2>
         <p>
           BOBA Munch is a group based in the San Francisco Bay Area. We welcome
           individuals who identify with a broad range of identities including
@@ -31,13 +31,15 @@ export default function About() {
         </p>
         <p>
           If not, please give us this space. Feel free to DM any member of
-          Leadership listed on this profile if you have any questions.
+          Leadership listed on this{" "}
+          <a href="https://fetlife.com/users/14009315">profile</a> if you have
+          any questions.
         </p>
         <p>
           DO NOT COME to our events with the intention of cruising, hooking up
           with our members, satisfying any racial/ethnic fetishes, or bigotry.
         </p>
-      </div>
+      </main>
 
       <Separator.Root decorative />
     </>

@@ -4,17 +4,34 @@ import { Link } from "@remix-run/react";
 
 export default function Navbar() {
   return (
-    <NavigationMenu.Root>
-      <NavigationMenu.Item>
-        <NavigationMenu.Trigger>
-          <Link to={"/"}>Home</Link>
-        </NavigationMenu.Trigger>
-      </NavigationMenu.Item>
-      <NavigationMenu.Item>
-        <NavigationMenu.Trigger>
-          <Link to={"/calendar"}>Calendar</Link>
-        </NavigationMenu.Trigger>
-      </NavigationMenu.Item>
-    </NavigationMenu.Root>
+    <header>
+      <div className="header__title">
+        <h1>Boba Munch</h1>
+      </div>
+
+      <NavigationMenu.Root className="header__navbar_root">
+        <NavigationMenu.List className="header__navbar_list">
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger className="header__navbar_button">
+              {/* <Link to={"/"}>Home</Link> */}
+              <NavigationMenu.Link href="/" className="header__navbar_link">
+                Home
+              </NavigationMenu.Link>
+            </NavigationMenu.Trigger>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger className="header__navbar_button">
+              <NavigationMenu.Link
+                href="/calendar"
+                className="header__navbar_link"
+              >
+                Calendar
+              </NavigationMenu.Link>
+              {/* <Link to={"/calendar"}>Calendar</Link> */}
+            </NavigationMenu.Trigger>
+          </NavigationMenu.Item>
+        </NavigationMenu.List>
+      </NavigationMenu.Root>
+    </header>
   );
 }

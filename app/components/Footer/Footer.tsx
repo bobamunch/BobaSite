@@ -13,6 +13,17 @@ import { colors } from "~/constants";
 // `;
 
 function Footer() {
-  return <div>Copyright ©{new Date().getFullYear()} BOBA Munch</div>;
+  return (
+    <footer>
+      <div className="footer_icons">
+        <div className="footer_icons__instagram">Insta</div>
+        <div className="footer_icons__fetlife">Fetlife</div>
+        <div className="footer_icons__email">Email</div>
+      </div>
+      <small className="">
+        Copyright ©{new Date().getFullYear()} BOBA Munch
+      </small>
+    </footer>
+  );
 }
 export default Footer;

@@ -47,11 +47,12 @@ const faqItems: Array<{ question: string; content: ReactNode }> = [
 
 function FAQItem(props: FAQItemProps) {
   const { value, question, content } = props;
-
   return (
     <Accordion.AccordionItem value={value}>
       <Accordion.Header>
-        <Accordion.AccordionTrigger>{question}</Accordion.AccordionTrigger>
+        <Accordion.AccordionTrigger>
+          <h3>{question}</h3>
+        </Accordion.AccordionTrigger>
       </Accordion.Header>
       <Accordion.Content>{content}</Accordion.Content>
     </Accordion.AccordionItem>
@@ -60,7 +61,8 @@ function FAQItem(props: FAQItemProps) {
 
 export default function FAQ() {
   return (
-    <div>
+    <>
+      <h2>FAQ</h2>
       <Accordion.Root type={"multiple"}>
         {faqItems.map(({ question, content }, index) => (
           <FAQItem
@@ -71,6 +73,6 @@ export default function FAQ() {
           />
         ))}
       </Accordion.Root>
-    </div>
+    </>
   );
 }
