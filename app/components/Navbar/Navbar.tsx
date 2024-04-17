@@ -13,7 +13,6 @@ export default function Navbar() {
         <NavigationMenu.List className="header__navbar_list">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="header__navbar_button">
-              {/* <Link to={"/"}>Home</Link> */}
               <NavigationMenu.Link href="/" className="header__navbar_link">
                 Home
               </NavigationMenu.Link>
@@ -27,7 +26,6 @@ export default function Navbar() {
               >
                 Calendar
               </NavigationMenu.Link>
-              {/* <Link to={"/calendar"}>Calendar</Link> */}
             </NavigationMenu.Trigger>
           </NavigationMenu.Item>
         </NavigationMenu.List>

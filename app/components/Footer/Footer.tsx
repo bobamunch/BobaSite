@@ -3,22 +3,31 @@ import React from "react";
 import pkg from "grommet-icons";
 
 import FetlifeIcon from "../FetlifeIcon/FetlifeIcon";
-import { colors } from "~/constants";
-
-// const Fetlife = styled(FetlifeIcon)`
-//   width: 24px;
-//   height: auto;
-//   margin-top: -8px;
-//   fill: ${colors.porsche};
-// `;
+import { InstagramLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 function Footer() {
   return (
     <footer>
-      <div className="footer_icons">
-        <div className="footer_icons__instagram">Insta</div>
-        <div className="footer_icons__fetlife">Fetlife</div>
-        <div className="footer_icons__email">Email</div>
+      <div className="footer__icons">
+        <InstagramLogoIcon
+          height={26}
+          width={26}
+          href="https://www.instagram.com/bobamunch/"
+          className="footer__icon"
+        />
+        <FetlifeIcon
+          height={26}
+          width={26}
+          fill={"#E5A363"}
+          href="https://fetlife.com/users/14009315"
+          className="footer__icon"
+        />
+        <EnvelopeClosedIcon
+          height={26}
+          width={26}
+          href="bobamunch@gmail.com"
+          className="footer__icon"
+        />
       </div>
       <small className="">
         Copyright ©{new Date().getFullYear()} BOBA Munch

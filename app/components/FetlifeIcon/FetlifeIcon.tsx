@@ -1,27 +1,27 @@
 import * as React from "react";
 import { SVGProps } from "react";
-interface SVGRProps {
-  width: number;
-  height: number;
-}
 
-export default function FetlifeIcon({
-  width,
-  height,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) {
+function FetlifeIcon(props: SVGProps<SVGSVGElement>) {
+  const { width, height, fill, stroke } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox="0.127 -3.712 15.75 19.714"
+      fill={fill ?? "none"}
+      stroke={stroke ?? "#000"}
+      data-name="Layer 2"
+      viewBox="0 0 48 48"
       {...props}
     >
       <path
-        fill="current"
-        d="M15.06 7.812c0 3.38-4.04 5.176-7.06 8.19-3.02-3.014-7.06-4.81-7.06-8.19 0-.704.207-1.36.563-1.91a6.565 6.565 0 0 1-.075-2.259 7.462 7.462 0 0 1 .577-1.985A8.386 8.386 0 0 1 2.711.382C2.8.251 2.892.122 2.99 0c-.018.155-.026.31-.03.464a7.546 7.546 0 0 0 .082 1.351 5.83 5.83 0 0 0 .473 1.609 4.119 4.119 0 0 0 .565.884 3.58 3.58 0 0 1 .389-.021C6.42 4.287 8 5.925 8 5.925s1.58-1.638 3.53-1.638c.132 0 .263.007.391.021a3.74 3.74 0 0 0 .566-.884 5.831 5.831 0 0 0 .473-1.609 7.57 7.57 0 0 0 .083-1.351 5.503 5.503 0 0 0-.03-.464c.098.122.19.25.28.382a8.385 8.385 0 0 1 .706 1.276c.267.606.474 1.267.576 1.984.05.359.073.731.061 1.114a6.361 6.361 0 0 1-.139 1.145c.356.55.563 1.207.563 1.91z"
+        d="M40.14 13.81h0c6.24-7.15-2.66-8.31-2.66-8.31 2.86 3.85 1.28 4.93.2 5.84l-.13.12A9.95 9.95 0 0 0 24 14.28a10 10 0 0 0-8.23-4.37h0a10 10 0 0 0-5.32 1.55l-.13-.12c-1.08-.91-2.66-2 .2-5.84 0 0-8.9 1.16-2.66 8.31h0A9.94 9.94 0 0 0 8 26.18h0L24 42.5l15.83-16.13.08-.09.08-.1h0a9.94 9.94 0 0 0 .16-12.37Z"
+        style={{
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+        }}
       />
     </svg>
   );
 }
+export default FetlifeIcon;

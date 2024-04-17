@@ -47,10 +47,11 @@ const faqItems: Array<{ question: string; content: ReactNode }> = [
 
 function FAQItem(props: FAQItemProps) {
   const { value, question, content } = props;
+
   return (
     <Accordion.AccordionItem value={value}>
       <Accordion.Header>
-        <Accordion.AccordionTrigger>
+        <Accordion.AccordionTrigger className="faq__question">
           <h3>{question}</h3>
         </Accordion.AccordionTrigger>
       </Accordion.Header>
