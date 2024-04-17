@@ -12,12 +12,12 @@ body {
 
 @font-face {
   font-family: "TheSeasons";
-  src: url("/public/fonts/theseasons-reg.otf") format("opentype");
+  src: url("/fonts/theseasons-reg.otf") format("opentype");
 }
 
 @font-face {
   font-family: "TheSeasons";
-  src: url("/public/fonts/theseasons-bd.otf") format("opentype");
+  src: url("/fonts/theseasons-bd.otf") format("opentype");
   font-weight: 700;
 }
 
