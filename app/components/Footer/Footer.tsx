@@ -1,10 +1,7 @@
 import React from "react";
 
-import pkg from "grommet-icons";
-
 import FetlifeIcon from "../Icons/FetlifeIcon";
 import { InstagramLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
-import { redirect } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
 function Footer() {
