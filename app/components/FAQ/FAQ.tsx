@@ -36,8 +36,8 @@ export default function FAQ(props: FAQProps) {
   const { title, htmlTitle, faqItems } = props;
   return (
     <>
+      <h2 className="faq__title">{title}</h2>
       <Accordion.Root type={"multiple"}>
-        <h2>{title}</h2>
         {faqItems.map(({ question, content }, index) => (
           <FAQItem
             key={`${htmlTitle}-faq-item` + index}

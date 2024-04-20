@@ -92,12 +92,37 @@ footer {
   color: rgb(229, 163, 99);
 }
 
+.faq__header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.faq__header {
+  padding-bottom: 0.4rem;
+}
+
+.faq__header:hover {
+  text-decoration-color: rgb(229, 163, 99);
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
 .faq__header[data-state="open"] > .faq_question__plus_icon {
   display: none;
 }
 
 .faq__header[data-state="closed"] > .faq_question__minus_icon {
   display: none;
+}
+
+.faq_answer {
+  padding-bottom: 1.25rem;
+}
+
+.separator {
+  border-bottom-color: rgb(229, 163, 99);
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
 }
 
 footer > small {

@@ -40,8 +40,7 @@ export default function About() {
           with our members, satisfying any racial/ethnic fetishes, or bigotry.
         </p>
       </main>
-
-      <Separator.Root decorative />
+      <Separator.Root className="separator" decorative />
     </>
   );
 }

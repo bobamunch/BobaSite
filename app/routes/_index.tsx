@@ -4,11 +4,9 @@ import { aboutFAQ } from "~/components/FAQ/FAQItems";
 
 export default function Index() {
   return (
-    <body>
+    <>
       <About />
-      <div>
-        <FAQ title="FAQ" htmlTitle="faq" faqItems={aboutFAQ} />
-      </div>
-    </body>
+      <FAQ title="FAQ" htmlTitle="faq" faqItems={aboutFAQ} />
+    </>
   );
 }
