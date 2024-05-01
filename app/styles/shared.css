@@ -1,15 +1,22 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+}
+
 html {
   font-size: medium;
 }
 
 body {
-  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* TODO: make curved background */
+  line-height: 1.3;
+  background: no-repeat top url("/layered-waves-haikei.svg");
 }
 
 @font-face {
@@ -30,14 +37,40 @@ body {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3 {
   font-family: "LibreCaslonText";
 }
 
+.page-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100%;
+}
+
 header,
 footer {
+  padding: 1rem;
+
   background-color: rgb(51, 51, 51);
   color: rgb(229, 163, 99);
   display: flex;
@@ -45,10 +78,18 @@ footer {
   align-items: center;
 }
 
+.header__title {
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+}
+
+.header__title:hover {
+  background-color: rgb(38, 38, 38);
+}
+
 .header__navbar_root {
   margin-left: auto; /* puts space between header title and navbar */
   color: rgb(229, 163, 99);
-  font-weight: 500;
 }
 
 .header__navbar_list {
@@ -116,7 +157,7 @@ footer {
 }
 
 .faq_answer {
-  padding-bottom: 1.25rem;
+  padding-bottom: 2rem;
 }
 
 .separator {

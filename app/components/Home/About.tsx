@@ -36,8 +36,9 @@ export default function About() {
           any questions.
         </p>
         <p>
-          DO NOT COME to our events with the intention of cruising, hooking up
-          with our members, satisfying any racial/ethnic fetishes, or bigotry.
+          <b>DO NOT COME</b> to our events with the intention of cruising,
+          hooking up with our members, satisfying any racial/ethnic fetishes, or
+          bigotry.
         </p>
       </main>
       <Separator.Root className="separator" decorative />

@@ -6,22 +6,14 @@ import { eventFAQ } from "~/components/FAQ/FAQItems";
 
 export default function CalendarPage() {
   return (
-    <div>
+    <main className="page-content">
       <FullCalendar
+        showNonCurrentDates={false}
+        fixedWeekCount={false}
         events={[
           {
             title: "event1",
-            start: "2024-04-20",
-          },
-
-          {
-            title: "event2",
-            start: "2024-04-29",
-          },
-
-          {
-            title: "event3",
-            start: "2024-05-01",
+            start: "2024-05-11",
           },
         ]}
         headerToolbar={{
@@ -36,6 +28,6 @@ export default function CalendarPage() {
       <div>
         <FAQ title="Event FAQ" htmlTitle="event-faq" faqItems={eventFAQ} />
       </div>
-    </div>
+    </main>
   );
 }

@@ -35,7 +35,7 @@ function FAQItem(props: FAQItemProps) {
 export default function FAQ(props: FAQProps) {
   const { title, htmlTitle, faqItems } = props;
   return (
-    <>
+    <div className="faq-section">
       <h2 className="faq__title">{title}</h2>
       <Accordion.Root type={"multiple"}>
         {faqItems.map(({ question, content }, index) => (
@@ -47,6 +47,6 @@ export default function FAQ(props: FAQProps) {
           />
         ))}
       </Accordion.Root>
-    </>
+    </div>
   );
 }

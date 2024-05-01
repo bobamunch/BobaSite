@@ -5,9 +5,9 @@ import { Link } from "@remix-run/react";
 export default function Navbar() {
   return (
     <header>
-      <div className="header__title">
+      <Link to="/" className="header__title">
         <h1>BOBA Munch</h1>
-      </div>
+      </Link>
 
       <NavigationMenu.Root className="header__navbar_root">
         <NavigationMenu.List className="header__navbar_list">
