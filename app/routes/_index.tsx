@@ -35,7 +35,7 @@ export default function Index() {
   const events = useLoaderData<typeof loader>();
 
   return (
-    <div className="page-content">
+    <main className="page-content">
       <MainLogo />
       <div className="event-card">
         {events?.map((event, index) => (
@@ -52,6 +52,6 @@ export default function Index() {
       <About />
 
       <FAQ title="FAQ" htmlTitle="faq" faqItems={aboutFAQ} />
-    </div>
+    </main>
   );
 }

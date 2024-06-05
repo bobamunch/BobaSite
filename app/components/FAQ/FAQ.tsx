@@ -1,12 +1,6 @@
 import * as Accordion from "@radix-ui/react-accordion";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { PlusIcon, MinusIcon } from "@radix-ui/react-icons";
-
-interface FAQItemProps {
-  value: string;
-  question: string;
-  content: ReactNode;
-}
 
 interface FAQProps {
   title: string;
@@ -14,23 +8,22 @@ interface FAQProps {
   faqItems: Array<{ question: string; content: ReactNode }>;
 }
 
-function FAQItem(props: FAQItemProps) {
-  const { value, question, content } = props;
-
-  return (
-    <Accordion.AccordionItem value={value}>
-      <Accordion.AccordionTrigger className="faq__question">
-        <Accordion.Header className="faq__header">
-          <PlusIcon className="faq_question__plus_icon" />
-          <MinusIcon className="faq_question__minus_icon" />
-          {question}
-        </Accordion.Header>
-      </Accordion.AccordionTrigger>
-
-      {content}
-    </Accordion.AccordionItem>
-  );
-}
+/* TODO: figure out how to type */
+const AccordionTrigger = React.forwardRef(
+  ({ children, className, ...props }, forwardedRef) => (
+    <Accordion.Header className="AccordionHeader">
+      <Accordion.Trigger
+        className="faq__question"
+        {...props}
+        ref={forwardedRef}
+      >
+        <PlusIcon className="faq_question__plus_icon" />
+        <MinusIcon className="faq_question__minus_icon" />
+        {children}
+      </Accordion.Trigger>
+    </Accordion.Header>
+  ),
+);
 
 export default function FAQ(props: FAQProps) {
   const { title, htmlTitle, faqItems } = props;
@@ -39,12 +32,13 @@ export default function FAQ(props: FAQProps) {
       <h2 className="faq__title">{title}</h2>
       <Accordion.Root type={"multiple"}>
         {faqItems.map(({ question, content }, index) => (
-          <FAQItem
+          <Accordion.AccordionItem
             key={`${htmlTitle}-faq-item` + index}
             value={`${htmlTitle}-faq-item` + index}
-            question={question}
-            content={content}
-          />
+          >
+            <AccordionTrigger>{question}</AccordionTrigger>
+            {content}
+          </Accordion.AccordionItem>
         ))}
       </Accordion.Root>
     </div>
