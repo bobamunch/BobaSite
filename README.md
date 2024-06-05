@@ -34,3 +34,21 @@ Make sure to deploy the output of `npm run build`
 
 - `build/server`
 - `build/client`
+
+TODO
+
+FAQ on main page is broken for some reason...
+Use environment variables for API Keys
+Make UI responsive
+
+Use CSS custom properties
+
+## Style Guide
+
+### Layout
+
+### Colors
+
+### Typography
+
+### Icons

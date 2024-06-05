@@ -24,7 +24,6 @@ export const aboutFAQ: Array<{ question: string; content: ReactNode }> = [
       </Accordion.Content>
     ),
   },
-
   {
     question: `How do I join the Discord server?`,
     content: (
@@ -56,7 +55,6 @@ export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
       </Accordion.Content>
     ),
   },
-
   {
     question: `Vaccine and booster requirements.`,
     content: (
@@ -66,7 +64,6 @@ export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
       </Accordion.Content>
     ),
   },
-
   {
     question: `Being a dry munch.`,
     content: (

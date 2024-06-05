@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   background: no-repeat top url("/layered-waves-haikei.svg");
+  background-size: cover;
 }
 
 @font-face {
@@ -55,6 +56,32 @@ body {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
 h1,
 h2,
 h3 {
@@ -70,6 +97,7 @@ h3 {
 
 header,
 footer {
+  z-index: 1;
   flex-grow: 0; /* needed for sticky footer */
   flex-shrink: 0;
   padding: 1%;
@@ -120,6 +148,54 @@ footer {
   box-shadow: none;
 }
 
+.event-card {
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+}
+
+.event-card > a {
+  text-decoration-color: none;
+  text-decoration-line: none;
+}
+
+.event-card__container {
+  display: flex;
+  align-items: center;
+
+  /* position: relative; */
+
+  background-color: rgb(155, 20, 20);
+  border-color: rgb(229, 163, 99);
+  border-width: 1.5px;
+  border-style: dashed;
+  border-radius: 6px;
+  padding: 0px 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  box-shadow: rgb(155, 20, 20) 0px 0px 0px 5px;
+}
+
+.event-card-info-container__next-event {
+  color: rgb(229, 163, 99);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.event-card-info-container__event-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.event-card-info-container__event-date {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.event-card-info-container__event-time {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .faq__question {
   /* Removes the default border styling */
   background: none;
@@ -166,16 +242,6 @@ footer {
   border-bottom-color: rgb(229, 163, 99);
   border-bottom-width: 1px;
   border-bottom-style: dashed;
-}
-
-:root {
-  --fc-button-bg-color: rgb(51, 51, 51);
-  --fc-event-bg-color: rgb(229, 163, 99);
-  --fc-event-border-color: rgb(229, 163, 99);
-}
-
-.fc {
-  margin-top: 1%;
 }
 
 footer > small {

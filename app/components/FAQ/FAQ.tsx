@@ -27,7 +27,7 @@ function FAQItem(props: FAQItemProps) {
         </Accordion.Header>
       </Accordion.AccordionTrigger>
 
-      <Accordion.Content>{content}</Accordion.Content>
+      {content}
     </Accordion.AccordionItem>
   );
 }
