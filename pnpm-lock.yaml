@@ -5,21 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@fullcalendar/core':
-    specifier: ^6.1.14
-    version: 6.1.14
-  '@fullcalendar/daygrid':
-    specifier: ^6.1.14
-    version: 6.1.14(@fullcalendar/core@6.1.14)
-  '@fullcalendar/google-calendar':
-    specifier: ^6.1.14
-    version: 6.1.14(@fullcalendar/core@6.1.14)
-  '@fullcalendar/list':
-    specifier: ^6.1.14
-    version: 6.1.14(@fullcalendar/core@6.1.14)
-  '@fullcalendar/react':
-    specifier: ^6.1.14
-    version: 6.1.14(@fullcalendar/core@6.1.14)(react-dom@18.3.1)(react@18.3.1)
   '@googleapis/calendar':
     specifier: ^9.7.4
     version: 9.7.4
@@ -73,9 +58,6 @@ devDependencies:
   '@types/react':
     specifier: ^18.3.3
     version: 18.3.3
-  '@types/react-big-calendar':
-    specifier: ^1.8.9
-    version: 1.8.9
   '@types/react-dom':
     specifier: ^18.3.0
     version: 18.3.0
@@ -904,48 +886,6 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
-
-  /@fullcalendar/core@6.1.14:
-    resolution: {integrity: sha512-hIPRBevm0aMc2aHy1hRIJgXmI1QTvQM1neQa9oxtuqUmF1+ApYC3oAdwcQMTuI7lHHw3pKJDyJFkKLPPnL6HXA==}
-    dependencies:
-      preact: 10.12.1
-    dev: false
-
-  /@fullcalendar/daygrid@6.1.14(@fullcalendar/core@6.1.14):
-    resolution: {integrity: sha512-DSyjiA1dEM8k3bOCrZpZOmAOZu71KGtH02ze+4QKuhxkmn/zQghmmLRdfzpOrcyJg6xGKkoB4pBcO+2lXar8XQ==}
-    peerDependencies:
-      '@fullcalendar/core': ~6.1.14
-    dependencies:
-      '@fullcalendar/core': 6.1.14
-    dev: false
-
-  /@fullcalendar/google-calendar@6.1.14(@fullcalendar/core@6.1.14):
-    resolution: {integrity: sha512-tzXd462N56Hxwuc3g9kiexm66hMiAHPStdXWWPd+dvfanmc3xWwLCGkp1nU7F3idakmwL51mQkswRUNKXSdl2g==}
-    peerDependencies:
-      '@fullcalendar/core': ~6.1.14
-    dependencies:
-      '@fullcalendar/core': 6.1.14
-    dev: false
-
-  /@fullcalendar/list@6.1.14(@fullcalendar/core@6.1.14):
-    resolution: {integrity: sha512-eV0/6iCumYfvlPzIUTAONWH17/JlQCyCChUz8m06L4E/sOiNjkHGz8vlVTmZKqXzx9oWOOyV/Nm3pCtHmVZh+Q==}
-    peerDependencies:
-      '@fullcalendar/core': ~6.1.14
-    dependencies:
-      '@fullcalendar/core': 6.1.14
-    dev: false
-
-  /@fullcalendar/react@6.1.14(@fullcalendar/core@6.1.14)(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-sXLn2D8aPYLuDH3fy2ZhHTOz5WNSU1NhoECsGBzjUtz2IYHy6m5Y9TqlyqeAqVqFLDRSJAlKAr5LyrIvnD/IMA==}
-    peerDependencies:
-      '@fullcalendar/core': ~6.1.14
-      react: ^16.7.0 || ^17 || ^18 || ^19
-      react-dom: ^16.7.0 || ^17 || ^18 || ^19
-    dependencies:
-      '@fullcalendar/core': 6.1.14
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    dev: false
 
   /@googleapis/calendar@9.7.4:
     resolution: {integrity: sha512-vDW9Qviz0frlDPNqFl+3FFEJf/jqYHEf82QXTjOb9K0rIH7b+GZL8fAkCMIfrryjdWOkIUcWY08PPHTDV2pxLQ==}
@@ -1905,10 +1845,6 @@ packages:
   /@types/cookie@0.6.0:
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
-  /@types/date-arithmetic@4.1.4:
-    resolution: {integrity: sha512-p9eZ2X9B80iKiTW4ukVj8B4K6q9/+xFtQ5MGYA5HWToY9nL4EkhV9+6ftT2VHpVMEZb5Tv00Iel516bVdO+yRw==}
-    dev: true
-
   /@types/debug@4.1.12:
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
     dependencies:
@@ -1968,14 +1904,6 @@ packages:
 
   /@types/prop-types@15.7.12:
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
-
-  /@types/react-big-calendar@1.8.9:
-    resolution: {integrity: sha512-HIHLUxR3PzWHrFdZ00VnCMvDjAh5uzlL0vMC2b7tL3bKaAJsqq9T8h+x0GVeDbZfMfHAd1cs5tZBhVvourNJXQ==}
-    dependencies:
-      '@types/date-arithmetic': 4.1.4
-      '@types/prop-types': 15.7.12
-      '@types/react': 18.3.3
-    dev: true
 
   /@types/react-dom@18.3.0:
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
@@ -5649,10 +5577,6 @@ packages:
       picocolors: 1.0.1
       source-map-js: 1.2.0
     dev: true
-
-  /preact@10.12.1:
-    resolution: {integrity: sha512-l8386ixSsBdbreOAkqtrwqHwdvR35ID8c3rKPa8lCWuO86dBi32QWHV4vfsZK1utLLFMvw+Z5Ad4XLkZzchscg==}
-    dev: false
 
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}

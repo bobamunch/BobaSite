@@ -27,7 +27,7 @@ interface EventCardProps {
 }
 
 export default function EventCard(props: EventCardProps) {
-  const { name, location, startDate, endDate, link } = props;
+  const { name, startDate, endDate } = props;
 
   /** Sunday, Jul 9, 2024 */
   const getHumanReadableDate = (startDate: string): string =>

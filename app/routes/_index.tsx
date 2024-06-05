@@ -4,7 +4,7 @@ import { aboutFAQ } from "~/components/FAQ/FAQItems";
 import MainLogo from "~/components/MainLogo/MainLogo";
 
 import { json } from "@remix-run/node";
-import { calendar_v3, calendar, GaxiosPromise } from "@googleapis/calendar";
+import { calendar_v3, calendar } from "@googleapis/calendar";
 import Calendar = calendar_v3.Calendar;
 import { useLoaderData } from "@remix-run/react";
 import EventCard from "~/components/EventCard/EventCard";
@@ -23,9 +23,7 @@ export const loader = async () => {
     timeMin: new Date().toISOString(),
   });
 
-  console.log(events.data);
-
-  const result: calendar_v3.Schema$Event[] = events.data.items;
+  const result = events.data.items;
 
   if (!result) {
     throw new Response("Not found", { status: 404 });

@@ -1,4 +1,3 @@
-import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Link } from "@remix-run/react";
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 import FetlifeIcon from "../Icons/FetlifeIcon";
 import { InstagramLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { Link } from "@remix-run/react";
