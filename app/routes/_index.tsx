@@ -1,16 +1,15 @@
 import About from "../components/Home/About";
 import FAQ from "../components/FAQ/FAQ";
-import { aboutFAQ } from "~/components/FAQ/FAQItems";
 import MainLogo from "~/components/MainLogo/MainLogo";
 
 import { json } from "@remix-run/node";
 import { calendar_v3, calendar } from "@googleapis/calendar";
-import Calendar = calendar_v3.Calendar;
 import { useLoaderData } from "@remix-run/react";
 import EventCard from "~/components/EventCard/EventCard";
+import { aboutFAQ } from "~/components/FAQ/FAQItems";
 
 export const loader = async () => {
-  const eventsCalendar: Calendar = calendar({
+  const eventsCalendar: calendar_v3.Calendar = calendar({
     version: "v3",
     auth: process.env.GCAL_API_KEY,
   });

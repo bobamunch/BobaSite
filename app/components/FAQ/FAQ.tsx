@@ -27,6 +27,7 @@ const AccordionTrigger = React.forwardRef(
 
 export default function FAQ(props: FAQProps) {
   const { title, htmlTitle, faqItems } = props;
+
   return (
     <div className="faq-section">
       <h2 className="faq__title">{title}</h2>
