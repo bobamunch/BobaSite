@@ -1,3 +1,17 @@
+:root {
+  --porsche: #e5a363;
+  --contessa: #c06965;
+  --bg-color: #333333;
+  --pampas: #f7f2ec;
+  --dark-red: #9b1414;
+  --white: #ffffff;
+  --riverbed: #4a5c60;
+  --ff-primary: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
+    Arial, sans-serif;
+  --ff-heading: "LibreCaslonText";
+  --ff-event-card: "Montserrat";
+}
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
     Arial, sans-serif;
@@ -9,8 +23,21 @@ html {
 html,
 body {
   height: 100%;
+  /* gets rid of the white around the page */
   padding: 0;
   margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.main-logo {
+  max-height: 320px;
+  max-width: 320px;
+  margin: 5%;
+  object-fit: contain;
 }
 
 body {
@@ -85,7 +112,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "LibreCaslonText";
+  font-family: var(--ff-heading);
 }
 
 .page-content {
@@ -97,15 +124,27 @@ h3 {
 
 header,
 footer {
+  color: var(--porsche);
+  background-color: var(--bg-color);
+}
+
+header > .horizontal-center,
+footer > .horizontal-center {
   z-index: 1;
   flex-grow: 0; /* needed for sticky footer */
   flex-shrink: 0;
   padding: 1%;
-  background-color: rgb(51, 51, 51);
-  color: rgb(229, 163, 99);
+
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+/* https://stackoverflow.com/questions/32180091/html-fixed-header-footer-horizontally-centered-layout */
+.horizontal-center {
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 2%;
 }
 
 .header__title {
@@ -114,12 +153,12 @@ footer {
 }
 
 .header__title:hover {
-  background-color: rgb(38, 38, 38);
+  background-color: var(--bg-color);
 }
 
 .header__navbar_root {
   margin-left: auto; /* puts space between header title and navbar */
-  color: rgb(229, 163, 99);
+  color: var(--porsche);
 }
 
 .header__navbar_list {
@@ -130,7 +169,7 @@ footer {
 }
 
 .header__navbar_link {
-  color: rgb(229, 163, 99);
+  color: var(--porsche);
   font-weight: 500;
   font-size: 1.3rem;
   text-decoration: none;
@@ -148,9 +187,15 @@ footer {
   box-shadow: none;
 }
 
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .event-card {
-  font-family: "Montserrat";
-  color: rgb(255, 255, 255);
+  font-family: var(--ff-event-card);
+  color: var(--pampas);
 }
 
 .event-card > a {
@@ -162,27 +207,34 @@ footer {
   display: flex;
   align-items: center;
 
-  /* position: relative; */
-
-  background-color: rgb(155, 20, 20);
-  border-color: rgb(229, 163, 99);
+  max-height: 100px;
+  max-width: 500px;
+  background-color: var(--dark-red);
+  border-color: var(--porsche);
   border-width: 1.5px;
   border-style: dashed;
   border-radius: 6px;
-  padding: 0px 20px;
+  padding: 0px 0px;
   margin-bottom: 16px;
   cursor: pointer;
-  box-shadow: rgb(155, 20, 20) 0px 0px 0px 5px;
+  box-shadow: var(--dark-red) 0px 0px 0px 5px;
 }
 
-.event-card-info-container__next-event {
-  color: rgb(229, 163, 99);
-  font-size: 1.8rem;
-  font-weight: 600;
+.event-card-bobae {
+  float: left;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+
+  position: relative;
+  align-self: center;
+  left: -10px;
+  bottom: 5px;
 }
 
 .event-card-info-container__event-name {
-  font-size: 1.4rem;
+  color: var(--porsche);
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -208,7 +260,7 @@ footer {
 
 .faq_question__plus_icon,
 .faq_question__minus_icon {
-  color: rgb(229, 163, 99);
+  color: var(--porsche);
 }
 
 .faq__question {
@@ -216,11 +268,11 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0.4rem;
-  font-family: "LibreCaslonText";
+  font-family: var(--ff-heading);
 }
 
 .faq__question:hover {
-  text-decoration-color: rgb(229, 163, 99);
+  text-decoration-color: var(--porsche);
   text-decoration-line: underline;
   text-decoration-style: dashed;
 }
@@ -233,19 +285,44 @@ footer {
   display: none;
 }
 
-/* .faq_answer {
+.faq_answer {
   padding-bottom: 1.5rem;
-} */
+}
 
 .separator {
-  border-bottom-color: rgb(229, 163, 99);
+  border-bottom-color: var(--porsche);
   border-bottom-width: 1px;
   border-bottom-style: dashed;
 }
 
-footer > small {
-  margin-left: auto; /* puts space between copyright and logos */
-  color: rgb(248, 248, 248);
+.add-calendar-button {
+  margin-top: 20px;
+  max-width: 170px;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--dark-red);
+  border-color: var(--porsche);
+  border-width: 1.5px;
+  border-radius: 6px;
+  padding: 0px 2px 0px 2px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  box-shadow: var(--dark-red) 0px 0px 0px 5px;
+}
+
+.add-calendar-button__text {
+  margin-left: auto;
+  color: var(--porsche);
+  font-size: 1.4rem;
+  font-weight: 600;
+  flex-direction: column;
+}
+
+footer > .horizontal-center > small {
+  /* puts space between copyright and logos */
+  margin-left: auto;
+  color: var(--white);
 }
 
 .footer__icons {
@@ -253,7 +330,7 @@ footer > small {
 }
 
 .footer__icon {
-  color: rgb(229, 163, 99); /* overrides styling of Link element */
+  color: var(--porsche); /* overrides styling of Link element */
   margin-left: 2px;
   margin-right: 2px;
 }

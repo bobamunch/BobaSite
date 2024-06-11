@@ -39,39 +39,43 @@ export const aboutFAQ: Array<{ question: string; content: ReactNode }> = [
 
 export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
   {
-    question: `When are BOBA Munches held?`,
+    question: `When and where are BOBA Munches held?`,
     content: (
       <Accordion.Content className="faq_answer">
         Unless otherwise stated, our in-person monthly munches will be on the
-        second Sunday of the month.
+        second Sunday of the month. Our munches rotate between San Francisco,
+        East Bay, and San Jose.
       </Accordion.Content>
     ),
   },
   {
-    question: `Where are BOBA Munches held?`,
+    question: `Can I bring a plus one?`,
     content: (
       <Accordion.Content className="faq_answer">
-        Our munches rotate between San Francisco, East Bay, and San Jose.
+        We allow one plus one per member. The must be 18 or older and
+        kink-friendly.
       </Accordion.Content>
     ),
   },
   {
-    question: `Vaccine and booster requirements.`,
+    question: `What are the vaccine/booster requirements?`,
     content: (
       <Accordion.Content className="faq_answer">
-        We still expect all members attending BOBA Munch events to be fully
-        vaccinated, including booster shots, as a condition of attendance.
+        We still expect all members attending BOBA Munch events to have received
+        a COVID shot within the last 12 months. Read{" "}
+        <a href="https://fetlife.com/users/14009315/posts/7689352">here</a> for
+        more information.
       </Accordion.Content>
     ),
   },
   {
-    question: `Being a dry munch.`,
+    question: `What does being a 'dry' munch mean?`,
     content: (
       <Accordion.Content className="faq_answer">
         Official BOBA Munches are dry events -- not hosted at bars primarily
         serving alcoholic beverages -- to make sure all eligible members 18 or
-        older can attend. Personal alcohol consumption is welcome when
-        appropriate. Read{" "}
+        older can attend. Personal consumption of alcohol and other substances
+        is permitted when appropriate. Read{" "}
         <a href="https://fetlife.com/users/14009315/posts/7689352">here</a> for
         more information.
       </Accordion.Content>

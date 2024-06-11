@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-function FetlifeIcon(props: SVGProps<SVGSVGElement>) {
+export default function FetlifeIcon(props: SVGProps<SVGSVGElement>) {
   const { width, height, fill, stroke } = props;
   return (
     <svg
@@ -23,4 +23,3 @@ function FetlifeIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export default FetlifeIcon;

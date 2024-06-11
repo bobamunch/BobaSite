@@ -37,11 +37,10 @@ Make sure to deploy the output of `npm run build`
 
 TODO
 
-FAQ on main page is broken for some reason...
-Use environment variables for API Keys
-Make UI responsive
-
-Use CSS custom properties
+- Update readme
+- Update linktree
+- Deploy this site
+- Demo site
 
 ## Style Guide
 

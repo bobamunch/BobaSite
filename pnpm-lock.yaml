@@ -5,6 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fullcalendar/core':
+    specifier: ^6.1.14
+    version: 6.1.14
+  '@fullcalendar/google-calendar':
+    specifier: ^6.1.14
+    version: 6.1.14(@fullcalendar/core@6.1.14)
+  '@fullcalendar/list':
+    specifier: ^6.1.14
+    version: 6.1.14(@fullcalendar/core@6.1.14)
+  '@fullcalendar/react':
+    specifier: ^6.1.14
+    version: 6.1.14(@fullcalendar/core@6.1.14)(react-dom@18.3.1)(react@18.3.1)
   '@googleapis/calendar':
     specifier: ^9.7.4
     version: 9.7.4
@@ -886,6 +898,40 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fullcalendar/core@6.1.14:
+    resolution: {integrity: sha512-hIPRBevm0aMc2aHy1hRIJgXmI1QTvQM1neQa9oxtuqUmF1+ApYC3oAdwcQMTuI7lHHw3pKJDyJFkKLPPnL6HXA==}
+    dependencies:
+      preact: 10.12.1
+    dev: false
+
+  /@fullcalendar/google-calendar@6.1.14(@fullcalendar/core@6.1.14):
+    resolution: {integrity: sha512-tzXd462N56Hxwuc3g9kiexm66hMiAHPStdXWWPd+dvfanmc3xWwLCGkp1nU7F3idakmwL51mQkswRUNKXSdl2g==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.14
+    dependencies:
+      '@fullcalendar/core': 6.1.14
+    dev: false
+
+  /@fullcalendar/list@6.1.14(@fullcalendar/core@6.1.14):
+    resolution: {integrity: sha512-eV0/6iCumYfvlPzIUTAONWH17/JlQCyCChUz8m06L4E/sOiNjkHGz8vlVTmZKqXzx9oWOOyV/Nm3pCtHmVZh+Q==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.14
+    dependencies:
+      '@fullcalendar/core': 6.1.14
+    dev: false
+
+  /@fullcalendar/react@6.1.14(@fullcalendar/core@6.1.14)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-sXLn2D8aPYLuDH3fy2ZhHTOz5WNSU1NhoECsGBzjUtz2IYHy6m5Y9TqlyqeAqVqFLDRSJAlKAr5LyrIvnD/IMA==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.14
+      react: ^16.7.0 || ^17 || ^18 || ^19
+      react-dom: ^16.7.0 || ^17 || ^18 || ^19
+    dependencies:
+      '@fullcalendar/core': 6.1.14
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
 
   /@googleapis/calendar@9.7.4:
     resolution: {integrity: sha512-vDW9Qviz0frlDPNqFl+3FFEJf/jqYHEf82QXTjOb9K0rIH7b+GZL8fAkCMIfrryjdWOkIUcWY08PPHTDV2pxLQ==}
@@ -5577,6 +5623,10 @@ packages:
       picocolors: 1.0.1
       source-map-js: 1.2.0
     dev: true
+
+  /preact@10.12.1:
+    resolution: {integrity: sha512-l8386ixSsBdbreOAkqtrwqHwdvR35ID8c3rKPa8lCWuO86dBi32QWHV4vfsZK1utLLFMvw+Z5Ad4XLkZzchscg==}
+    dev: false
 
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}

@@ -7,6 +7,7 @@ import { calendar_v3, calendar } from "@googleapis/calendar";
 import { useLoaderData } from "@remix-run/react";
 import EventCard from "~/components/EventCard/EventCard";
 import { aboutFAQ } from "~/components/FAQ/FAQItems";
+import * as Separator from "@radix-ui/react-separator";
 
 export const loader = async () => {
   const eventsCalendar: calendar_v3.Calendar = calendar({
@@ -34,23 +35,28 @@ export default function Index() {
   const events = useLoaderData<typeof loader>();
 
   return (
-    <main className="page-content">
-      <MainLogo />
-      <div className="event-card">
-        {events?.map((event, index) => (
-          <EventCard
-            key={`event${index}`}
-            name={event?.summary ?? ""}
-            location={event.location ?? ""}
-            startDate={event?.start?.dateTime ?? ""}
-            endDate={event?.end?.dateTime ?? ""}
-            link={event?.htmlLink ?? ""}
-          />
-        ))}
+    <main>
+      <div className="horizontal-center">
+        <div className="logo-wrapper">
+          <MainLogo />
+        </div>
+        <div className="event-card">
+          {events?.map((event, index) => (
+            <EventCard
+              key={`event${index}`}
+              name={event?.summary ?? ""}
+              location={event.location ?? ""}
+              startDate={event?.start?.dateTime ?? ""}
+              endDate={event?.end?.dateTime ?? ""}
+              link={event?.htmlLink ?? ""}
+              imageUrl={""}
+            />
+          ))}
+        </div>
+        <About />
+        <Separator.Root className="separator" decorative />
+        <FAQ title="FAQ" htmlTitle="faq" faqItems={aboutFAQ} />
       </div>
-      <About />
-
-      <FAQ title="FAQ" htmlTitle="faq" faqItems={aboutFAQ} />
     </main>
   );
 }
