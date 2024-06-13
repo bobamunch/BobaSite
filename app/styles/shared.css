@@ -22,7 +22,6 @@ html {
 
 html,
 body {
-  height: 100%;
   /* gets rid of the white around the page */
   padding: 0;
   margin: 0;
@@ -45,6 +44,13 @@ body {
   flex-direction: column;
   background: no-repeat top url("/layered-waves-haikei.svg");
   background-size: cover;
+
+  /* https://matthewjamestaylor.com/responsive-columns */
+  /* fallback height */
+  min-height: 100vh;
+
+  /* new small viewport height for modern browsers */
+  min-height: 100svh;
 }
 
 @font-face {
@@ -120,6 +126,11 @@ h3 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
+}
+
+footer {
+  /* https://matthewjamestaylor.com/responsive-columns */
+  margin-top: auto;
 }
 
 header,
