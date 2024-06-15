@@ -9,12 +9,28 @@ import EventCard from "~/components/EventCard/EventCard";
 import { aboutFAQ } from "~/components/FAQ/FAQItems";
 import * as Separator from "@radix-ui/react-separator";
 
-export const loader = async () => {
-  const eventsCalendar: calendar_v3.Calendar = calendar({
-    version: "v3",
-    auth: process.env.GCAL_API_KEY,
-  });
+const bobaes = [
+  "boba-bear.png",
+  "boba-camo.png",
+  "boba-cat.png",
+  "boba-cow.png",
+  "boba-fan.png",
+  "boba-flannel.png",
+  "boba-frog.png",
+  "boba-hawaii.png",
+  "boba-impact.png",
+  "boba-maid.png",
+  "boba-rainbow.png",
+  "boba-rope.png",
+  "boba-unicorn.png",
+];
 
+const eventsCalendar: calendar_v3.Calendar = calendar({
+  version: "v3",
+  auth: process.env.GCAL_API_KEY,
+});
+
+export const loader = async () => {
   const events = await eventsCalendar.events.list({
     calendarId: process.env.CALENDAR_URL,
     orderBy: "startTime",
@@ -23,16 +39,16 @@ export const loader = async () => {
     timeMin: new Date().toISOString(),
   });
 
-  const result = events.data.items;
+  const calendarEvents = events.data.items;
 
-  if (!result) {
-    throw new Response("Not found", { status: 404 });
-  }
-  return json(result);
+  return json({
+    events: calendarEvents ?? [],
+    image: bobaes[Math.floor(Math.random() * (bobaes.length - 1))],
+  });
 };
 
 export default function Index() {
-  const events = useLoaderData<typeof loader>();
+  const data = useLoaderData<typeof loader>();
 
   return (
     <main>
@@ -42,7 +58,7 @@ export default function Index() {
           <MainLogo />
         </div>
         <div className="event-card">
-          {events?.map((event, index) => (
+          {data.events?.map((event, index) => (
             <EventCard
               key={`event${index}`}
               name={event?.summary ?? ""}
@@ -50,6 +66,7 @@ export default function Index() {
               startDate={event?.start?.dateTime ?? ""}
               endDate={event?.end?.dateTime ?? ""}
               link={event?.htmlLink ?? ""}
+              image={data.image}
             />
           ))}
         </div>

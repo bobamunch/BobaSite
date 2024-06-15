@@ -1,19 +1,4 @@
 import { Link } from "@remix-run/react";
-const bobaes = [
-  "boba-bear.png",
-  "boba-camo.png",
-  "boba-cat.png",
-  "boba-cow.png",
-  "boba-fan.png",
-  "boba-flannel.png",
-  "boba-frog.png",
-  "boba-hawaii.png",
-  "boba-impact.png",
-  "boba-maid.png",
-  "boba-rainbow.png",
-  "boba-rope.png",
-  "boba-unicorn.png",
-];
 
 interface EventCardProps {
   name: string;
@@ -21,12 +6,11 @@ interface EventCardProps {
   startDate: string;
   endDate: string;
   link: string;
+  image: string;
 }
 
-const image = bobaes[Math.floor(Math.random() * bobaes.length)];
-
 export default function EventCard(props: EventCardProps) {
-  const { name, startDate, endDate } = props;
+  const { name, startDate, endDate, image } = props;
 
   /** Sunday, Jul 9, 2024 */
   const getHumanReadableDate = (startDate: string): string =>
