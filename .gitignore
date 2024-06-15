@@ -3,3 +3,6 @@ public/build/*
 /.cache
 /build
 .env
+
+# Local Netlify folder
+.netlify
