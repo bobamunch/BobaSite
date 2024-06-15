@@ -1,6 +1,19 @@
 import { Link } from "@remix-run/react";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import * as React from "react";
+const bobaes = [
+  "boba-bear.png",
+  "boba-camo.png",
+  "boba-cat.png",
+  "boba-cow.png",
+  "boba-fan.png",
+  "boba-flannel.png",
+  "boba-frog.png",
+  "boba-hawaii.png",
+  "boba-impact.png",
+  "boba-maid.png",
+  "boba-rainbow.png",
+  "boba-rope.png",
+  "boba-unicorn.png",
+];
 
 interface EventCardProps {
   name: string;
@@ -10,35 +23,10 @@ interface EventCardProps {
   link: string;
 }
 
-const getImageUrl = () => {
-  const bobaes = [
-    "boba-bear.png",
-    "boba-camo.png",
-    "boba-cat.png",
-    "boba-cow.png",
-    "boba-fan.png",
-    "boba-flannel.png",
-    "boba-frog.png",
-    "boba-hawaii.png",
-    "boba-impact.png",
-    "boba-maid.png",
-    "boba-rainbow.png",
-    "boba-rope.png",
-    "boba-unicorn.png",
-  ];
-
-  return `bobaes/${bobaes[Math.floor(Math.random() * bobaes.length)]}`;
-};
+const image = bobaes[Math.floor(Math.random() * bobaes.length)];
 
 export default function EventCard(props: EventCardProps) {
   const { name, startDate, endDate } = props;
-
-  // https://react.dev/reference/react-dom/client/hydrateRoot#handling-different-client-and-server-content
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   /** Sunday, Jul 9, 2024 */
   const getHumanReadableDate = (startDate: string): string =>
@@ -61,9 +49,11 @@ export default function EventCard(props: EventCardProps) {
         className="event-card event-card__container"
         title="The next Boba Munch event is..."
       >
-        {isClient && (
-          <img className="event-card-bobae" src={getImageUrl()} alt=""></img>
-        )}
+        <img
+          className="event-card-bobae"
+          src={`bobaes/${image}`}
+          alt={image}
+        ></img>
         <div className="event-card-info-container">
           <div className="event-card-info-container__event-name">
             {name.toLocaleUpperCase()}
