@@ -33,16 +33,11 @@ const getImageUrl = () => {
 export default function EventCard(props: EventCardProps) {
   const { name, startDate, endDate } = props;
 
-  const [imageUrl, setImageUrl] = React.useState<string>();
+  // https://react.dev/reference/react-dom/client/hydrateRoot#handling-different-client-and-server-content
+  const [isClient, setIsClient] = React.useState(false);
 
-  /* Prevents server and client from having different src */
   React.useEffect(() => {
-    return () => {
-      if (typeof window !== "undefined") {
-        // running in a browser environment
-        setImageUrl(getImageUrl());
-      }
-    };
+    setIsClient(true);
   }, []);
 
   /** Sunday, Jul 9, 2024 */
@@ -66,9 +61,8 @@ export default function EventCard(props: EventCardProps) {
         className="event-card event-card__container"
         title="The next Boba Munch event is..."
       >
-        {/* Prevents the empty outline from showing */}
-        {imageUrl && (
-          <img className="event-card-bobae" src={imageUrl} alt=""></img>
+        {isClient && (
+          <img className="event-card-bobae" src={getImageUrl()} alt=""></img>
         )}
         <div className="event-card-info-container">
           <div className="event-card-info-container__event-name">

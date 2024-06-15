@@ -36,6 +36,7 @@ export default function Index() {
 
   return (
     <main>
+      <title>What is BOBA Munch?</title>
       <div className="horizontal-center">
         <div className="logo-wrapper">
           <MainLogo />
@@ -49,7 +50,6 @@ export default function Index() {
               startDate={event?.start?.dateTime ?? ""}
               endDate={event?.end?.dateTime ?? ""}
               link={event?.htmlLink ?? ""}
-              imageUrl={""}
             />
           ))}
         </div>

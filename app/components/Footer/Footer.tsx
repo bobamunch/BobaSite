@@ -8,7 +8,10 @@ function Footer() {
     <footer>
       <div className="horizontal-center">
         <div className="footer__icons">
-          <Link to="https://www.instagram.com/bobamunch/">
+          <Link
+            to="https://www.instagram.com/bobamunch/"
+            aria-label="Check BOBA Munch out on Instagram!"
+          >
             <InstagramLogoIcon
               height={26}
               width={26}
@@ -17,7 +20,10 @@ function Footer() {
             />
           </Link>
 
-          <Link to="https://fetlife.com/users/14009315">
+          <Link
+            to="https://fetlife.com/users/14009315"
+            aria-label="Check BOBA Munch out on Fetlife!"
+          >
             <FetlifeIcon
               height={26}
               width={26}
@@ -26,7 +32,7 @@ function Footer() {
             />
           </Link>
 
-          <Link to="mailto:bobamunch@gmail.com">
+          <Link to="mailto:bobamunch@gmail.com" aria-label="Email BOBA Munch!">
             <EnvelopeClosedIcon
               height={26}
               width={26}
@@ -34,7 +40,10 @@ function Footer() {
             />
           </Link>
 
-          <Link to="https://linktr.ee/bobamunch">
+          <Link
+            to="https://linktr.ee/bobamunch"
+            aria-label="Check out BOBA Munch's various platforms on Linktree!"
+          >
             <LinktreeIcon
               height={26}
               width={26}

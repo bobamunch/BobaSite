@@ -24,6 +24,7 @@ export default function CalendarPage() {
   const data = useLoaderData<typeof loader>();
   return (
     <main>
+      <title>BOBA Munch Calendar</title>
       <div className="horizontal-center">
         <h2>Calendar</h2>
         <p>
