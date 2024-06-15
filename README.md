@@ -34,7 +34,7 @@ netlify init
 Ensure all packages are installed by running:
 
 ```sh
-npm install
+pnpm install
 ```
 
 Run
@@ -67,19 +67,37 @@ netlify deploy --build
 netlify deploy --build --prod
 ```
 
-TODO
-
-- Update readme
-- Update linktree
-- Deploy this site
-- Demo site
-
 ## Style Guide
 
 ### Layout
 
+- Holy grail layout
+- Sticky header
+- Sticky footer
+
+## Tech Stack
+
+- pnpm
+- TypeScript
+- React (FullCalendar)
+- Remix
+- Netlify (Functions)
+- Squarespace Domains
+- Google Calendar API
+
 ### Colors
+
+- Porsche (#e5a363) - used for links, icons, FAQ header hover effects
+- Pampas (#f7f2ec) - for "white" text
+- Dark Red (#9b1414) - for event card
+- Dark Charcoal (#333333) - for header, footer
 
 ### Typography
 
+- Text: [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
+- Headers: [LibreCaslonText](https://fonts.google.com/specimen/Libre+Caslon+Text)
+- Event Card: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+
 ### Icons
+
+- [RadixUI](https://www.radix-ui.com/icons)

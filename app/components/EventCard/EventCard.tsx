@@ -8,31 +8,42 @@ interface EventCardProps {
   startDate: string;
   endDate: string;
   link: string;
-  imageUrl: string;
 }
 
+const getImageUrl = () => {
+  const bobaes = [
+    "boba-bear.png",
+    "boba-camo.png",
+    "boba-cat.png",
+    "boba-cow.png",
+    "boba-fan.png",
+    "boba-flannel.png",
+    "boba-frog.png",
+    "boba-hawaii.png",
+    "boba-impact.png",
+    "boba-maid.png",
+    "boba-rainbow.png",
+    "boba-rope.png",
+    "boba-unicorn.png",
+  ];
+
+  return `bobaes/${bobaes[Math.floor(Math.random() * bobaes.length)]}`;
+};
+
 export default function EventCard(props: EventCardProps) {
-  const { name, startDate, endDate, imageUrl } = props;
+  const { name, startDate, endDate } = props;
 
-  const getImageUrl = () => {
-    const bobaes = [
-      "boba-bear.png",
-      "boba-camo.png",
-      "boba-cat.png",
-      "boba-cow.png",
-      "boba-fan.png",
-      "boba-flannel.png",
-      "boba-frog.png",
-      "boba-hawaii.png",
-      "boba-impact.png",
-      "boba-maid.png",
-      "boba-rainbow.png",
-      "boba-rope.png",
-      "boba-unicorn.png",
-    ];
+  const [imageUrl, setImageUrl] = React.useState<string>();
 
-    return `bobaes/${bobaes[Math.floor(Math.random() * bobaes.length)]}`;
-  };
+  /* Prevents server and client from having different src */
+  React.useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined") {
+        // running in a browser environment
+        setImageUrl(getImageUrl());
+      }
+    };
+  }, []);
 
   /** Sunday, Jul 9, 2024 */
   const getHumanReadableDate = (startDate: string): string =>
@@ -55,7 +66,10 @@ export default function EventCard(props: EventCardProps) {
         className="event-card event-card__container"
         title="The next Boba Munch event is..."
       >
-        <img className="event-card-bobae" src={getImageUrl()} alt=""></img>
+        {/* Prevents the empty outline from showing */}
+        {imageUrl && (
+          <img className="event-card-bobae" src={imageUrl} alt=""></img>
+        )}
         <div className="event-card-info-container">
           <div className="event-card-info-container__event-name">
             {name.toLocaleUpperCase()}

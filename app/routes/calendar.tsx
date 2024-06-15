@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import FAQ from "~/components/FAQ/FAQ";
 import { eventFAQ } from "~/components/FAQ/FAQItems";
 
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import listPlugin from "@fullcalendar/list";
 import FullCalendar from "@fullcalendar/react";
-import { Link, json, useLoaderData } from "@remix-run/react";
+import { json, useLoaderData } from "@remix-run/react";
 
 import { CalendarIcon } from "@radix-ui/react-icons";
 
