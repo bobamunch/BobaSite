@@ -8,7 +8,6 @@ import { useLoaderData } from "@remix-run/react";
 import EventCard from "~/components/EventCard/EventCard";
 import { aboutFAQ } from "~/components/FAQ/FAQItems";
 import * as Separator from "@radix-ui/react-separator";
-import React from "react";
 
 const bobaes = [
   "boba-bear.png",
@@ -42,11 +41,14 @@ export const loader = async () => {
 
   const calendarEvents = events.data.items;
 
-  return json(calendarEvents);
+  return json({
+    events: calendarEvents ?? [],
+    image: bobaes[Math.floor(Math.random() * (bobaes.length - 1))],
+  });
 };
 
 export default function Index() {
-  const events = useLoaderData<typeof loader>();
+  const data = useLoaderData<typeof loader>();
 
   return (
     <main>
@@ -56,7 +58,7 @@ export default function Index() {
           <MainLogo />
         </div>
         <div className="event-card">
-          {events?.map((event, index) => (
+          {data.events?.map((event, index) => (
             <EventCard
               key={`event${index}`}
               name={event?.summary ?? ""}
@@ -64,7 +66,7 @@ export default function Index() {
               startDate={event?.start?.dateTime ?? ""}
               endDate={event?.end?.dateTime ?? ""}
               link={event?.htmlLink ?? ""}
-              image={bobaes[12]}
+              image={data.image}
             />
           ))}
         </div>
