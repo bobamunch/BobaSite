@@ -8,7 +8,6 @@ import { useLoaderData } from "@remix-run/react";
 import EventCard from "~/components/EventCard/EventCard";
 import { aboutFAQ } from "~/components/FAQ/FAQItems";
 import * as Separator from "@radix-ui/react-separator";
-import { serverOnly$ } from "vite-env-only/macros";
 
 const bobaes = [
   "boba-bear.png",
@@ -25,6 +24,18 @@ const bobaes = [
   "boba-rope.png",
   "boba-unicorn.png",
 ];
+
+function mulberry32(a) {
+  return () => {
+    let t = (a += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+const seed = (Math.random() * 2 ** 32) >>> 0;
+const getRandom = mulberry32(seed);
 
 const eventsCalendar: calendar_v3.Calendar = calendar({
   version: "v3",
@@ -44,8 +55,7 @@ export const loader = async () => {
 
   return json({
     events: calendarEvents ?? [],
-    image:
-      bobaes[serverOnly$(Math.floor(Math.random() * (bobaes.length - 1))) ?? 0],
+    image: bobaes[Math.floor(getRandom() * bobaes.length)],
   });
 };
 
