@@ -8,6 +8,7 @@ import { useLoaderData } from "@remix-run/react";
 import EventCard from "~/components/EventCard/EventCard";
 import { aboutFAQ } from "~/components/FAQ/FAQItems";
 import * as Separator from "@radix-ui/react-separator";
+import { serverOnly$ } from "vite-env-only/macros";
 
 const bobaes = [
   "boba-bear.png",
@@ -43,7 +44,8 @@ export const loader = async () => {
 
   return json({
     events: calendarEvents ?? [],
-    image: bobaes[Math.floor(Math.random() * (bobaes.length - 1))],
+    image:
+      bobaes[serverOnly$(Math.floor(Math.random() * (bobaes.length - 1))) ?? 0],
   });
 };
 
