@@ -25,7 +25,12 @@ const bobaes = [
   "boba-unicorn.png",
 ];
 
-function mulberry32(a) {
+const eventsCalendar: calendar_v3.Calendar = calendar({
+  version: "v3",
+  auth: process.env.GCAL_API_KEY,
+});
+
+function mulberry32(a: number) {
   return () => {
     let t = (a += 0x6d2b79f5);
     t = Math.imul(t ^ (t >>> 15), t | 1);
@@ -33,14 +38,6 @@ function mulberry32(a) {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
-
-const seed = (Math.random() * 2 ** 32) >>> 0;
-const getRandom = mulberry32(seed);
-
-const eventsCalendar: calendar_v3.Calendar = calendar({
-  version: "v3",
-  auth: process.env.GCAL_API_KEY,
-});
 
 export const loader = async () => {
   const events = await eventsCalendar.events.list({
@@ -52,6 +49,9 @@ export const loader = async () => {
   });
 
   const calendarEvents = events.data.items;
+
+  const seed = (Math.random() * 2 ** 32) >>> 0;
+  const getRandom = mulberry32(seed);
 
   return json({
     events: calendarEvents ?? [],
