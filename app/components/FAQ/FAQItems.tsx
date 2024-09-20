@@ -52,7 +52,7 @@ export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
     question: `Can I bring a plus one?`,
     content: (
       <Accordion.Content className="faq_answer">
-        We allow one plus one per member. The must be 18 or older and
+        We allow 1 plus one per memeber. They must be 18 or older and
         kink-friendly.
       </Accordion.Content>
     ),
@@ -61,8 +61,8 @@ export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
     question: `What are the vaccine/booster requirements?`,
     content: (
       <Accordion.Content className="faq_answer">
-        We still expect all members attending BOBA Munch events to have received
-        a COVID shot within the last 12 months. Read{" "}
+        We expect all members attending BOBA Munch events to have received a
+        COVID shot within the last 12 months. Read{" "}
         <a href="https://fetlife.com/users/14009315/posts/7689352">here</a> for
         more information.
       </Accordion.Content>

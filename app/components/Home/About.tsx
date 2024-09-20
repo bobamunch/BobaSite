@@ -21,9 +21,14 @@ export default function About() {
         a welcoming space for a broad range of identities. If you identify as
         any of the aforementioned cultural groups, you are welcome to join us in
         our community where you can meet others with similar experiences. If
-        not, please give us this space. Feel free to DM any member of Leadership
-        listed on this <a href="https://fetlife.com/users/14009315">profile</a>{" "}
-        if you have any questions.
+        not, please give us this space.
+        <p>
+          Feel free to reach out to us via our{" "}
+          <a href="https://www.instagram.com/bobamunch/">Instagram</a>,{" "}
+          <a href="https://fetlife.com/users/14009315">Fetlife</a>, or{" "}
+          <a href="mailto:bobamunch@gmail.com">email</a> if you have any
+          questions.
+        </p>
       </p>
       <p>
         <b>DO NOT COME</b> to our events with the intention of harassment,
