@@ -52,7 +52,9 @@ export default function CalendarPage() {
             };
           }}
           plugins={[listPlugin, googleCalendarPlugin]}
-          initialView="listYear"
+          initialView="list"
+          // avoids terminating at end of year
+          duration={{ months: 12 }}
         />
 
         <div

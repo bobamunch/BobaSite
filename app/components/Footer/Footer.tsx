@@ -2,6 +2,7 @@ import FetlifeIcon from "../Icons/FetlifeIcon";
 import { InstagramLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { Link } from "@remix-run/react";
 import LinktreeIcon from "../Icons/LinktreeIcon";
+import PluraIcon from "../Icons/PluraIcon";
 
 function Footer() {
   return (
@@ -25,6 +26,18 @@ function Footer() {
             aria-label="Check BOBA Munch out on Fetlife!"
           >
             <FetlifeIcon
+              height={26}
+              width={26}
+              fill={"#E5A363"} // needed to keep it orange
+              className="footer__icon"
+            />
+          </Link>
+
+          <Link
+            to="https://heyplura.com/events/org/bobamunch"
+            aria-label="Check BOBA Munch out on Plura!"
+          >
+            <PluraIcon
               height={26}
               width={26}
               fill={"#E5A363"} // needed to keep it orange
