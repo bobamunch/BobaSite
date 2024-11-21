@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-function PluraIcon(props: SVGProps<SVGSVGElement>) {
+export default function PluraIcon(props: SVGProps<SVGSVGElement>) {
   const { width, height, fill, stroke, strokeWidth } = props;
   return (
     <svg
@@ -16,4 +16,3 @@ function PluraIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export default PluraIcon;

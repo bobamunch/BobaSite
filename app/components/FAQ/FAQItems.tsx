@@ -3,6 +3,17 @@ import { ReactNode } from "react";
 
 export const aboutFAQ: Array<{ question: string; content: ReactNode }> = [
   {
+    question: `What is boba tea?`,
+    content: (
+      <Accordion.Content className="faq_answer">
+        &quot;Boba&quot; or bubble tea -- so-called for its sweet, chewy tapioca
+        pearls. The drink originated in Taiwan and surged in popularity with
+        Asian American youth in the 1990s, quickly becoming part of the Asian
+        American subculture. We often meet at places serving boba.
+      </Accordion.Content>
+    ),
+  },
+  {
     question: `What is a munch?`,
     content: (
       <Accordion.Content className="faq_answer">
@@ -14,13 +25,31 @@ export const aboutFAQ: Array<{ question: string; content: ReactNode }> = [
     ),
   },
   {
-    question: `What is boba tea?`,
+    question: `When and where was the first ever BOBA Munch held?`,
     content: (
       <Accordion.Content className="faq_answer">
-        &quot;Boba&quot; is a term for the sweet, chewy tapioca pearls in bubble
-        tea. The drink originated in Taiwan and surged in popularity with Asian
-        American youth in the 1990s, quickly becoming part of the Asian American
-        subculture.
+        Sunday, August 1st, 2021 from 2:00 to 4:00PM at Main Street Cupertino!
+      </Accordion.Content>
+    ),
+  },
+
+  {
+    question: `What does "Bobae" mean?`,
+    content: (
+      <Accordion.Content className="faq_answer">
+        An affectionate term coined by one of our members to refer to BOBA Munch
+        members. The plural is "Bobaes".
+      </Accordion.Content>
+    ),
+  },
+  {
+    question: `Why should I join the Discord server?`,
+    content: (
+      <Accordion.Content className="faq_answer">
+        The server acts as a online third place where you can continue meeting
+        and talking with your fellow Bobaes outside the munch. Our community
+        often hosts official and unofficial events that are only available to
+        server members.
       </Accordion.Content>
     ),
   },
@@ -28,10 +57,25 @@ export const aboutFAQ: Array<{ question: string; content: ReactNode }> = [
     question: `How do I join the Discord server?`,
     content: (
       <Accordion.Content className="faq_answer">
-        Join our Discord by attending in-person munches or by following{" "}
-        <a href="https://fetlife.com/groups/223073/posts/18659384">
-          these steps.
-        </a>
+        <ul>
+          <li>Attending one of our in-person munches or events.</li>
+          <li>
+            Alternatively, you can also DM us on Instagram or Fetlife the
+            following:
+            <ol>
+              <li>
+                How you identify as one or more of the following: Asian, Asian
+                American, Southeast Asian, Indian/South Asian, Middle Eastern,
+                and Pacific Islander.
+              </li>
+              <li>Tell us a bit about yourself and why you want to join.</li>
+              <li>
+                You'll need to provide a picture of your face next to a paper
+                that says "BOBA Munch".
+              </li>
+            </ol>
+          </li>
+        </ul>
       </Accordion.Content>
     ),
   },
@@ -52,7 +96,7 @@ export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
     question: `Can I bring a plus one?`,
     content: (
       <Accordion.Content className="faq_answer">
-        We allow 1 plus one per memeber. They must be 18 or older and
+        We allow 1 plus one per member. They must be 18 or older and
         kink-friendly.
       </Accordion.Content>
     ),
@@ -73,11 +117,31 @@ export const eventFAQ: Array<{ question: string; content: ReactNode }> = [
     content: (
       <Accordion.Content className="faq_answer">
         Official BOBA Munches are dry events -- not hosted at bars primarily
-        serving alcoholic beverages -- to make sure all eligible members 18 or
-        older can attend. Personal consumption of alcohol and other substances
-        is permitted when appropriate. Read{" "}
-        <a href="https://fetlife.com/users/14009315/posts/7689352">here</a> for
-        more information.
+        serving alcoholic beverages -- to provide a safe and inclusive
+        environment for all eligible members who are 18 or older. People may
+        wish to avoid alcohol consumption for personal, religious, cultural, or
+        dietary reasons. Personal consumption of alcohol and other substances is
+        permitted when appropriate.
+      </Accordion.Content>
+    ),
+  },
+  {
+    question: `How many people usually attend?`,
+    content: (
+      <Accordion.Content className="faq_answer">
+        Typically around 40 - 70 people attend our offical munches.
+      </Accordion.Content>
+    ),
+  },
+  {
+    question: `How do I report concerning behavior or individuals?`,
+    content: (
+      <Accordion.Content className="faq_answer">
+        Please reach out via{" "}
+        <a href="https://www.instagram.com/bobamunch/">Instagram</a>,{" "}
+        <a href="https://fetlife.com/users/14009315">Fetlife</a>, or{" "}
+        <a href="mailto:bobamunch@gmail.com">email.</a> Provide as much
+        information as you can.
       </Accordion.Content>
     ),
   },
