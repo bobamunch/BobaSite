@@ -57,25 +57,7 @@ export const aboutFAQ: Array<{ question: string; content: ReactNode }> = [
     question: `How do I join the Discord server?`,
     content: (
       <Accordion.Content className="faq_answer">
-        <ul>
-          <li>Attending one of our in-person munches or events.</li>
-          <li>
-            Alternatively, you can also DM us on Instagram or Fetlife the
-            following:
-            <ol>
-              <li>
-                How you identify as one or more of the following: Asian, Asian
-                American, Southeast Asian, Indian/South Asian, Middle Eastern,
-                and Pacific Islander.
-              </li>
-              <li>Tell us a bit about yourself and why you want to join.</li>
-              <li>
-                You'll need to provide a picture of your face next to a paper
-                that says "BOBA Munch".
-              </li>
-            </ol>
-          </li>
-        </ul>
+        We only give out Discord invites to attendees of our in-person events.
       </Accordion.Content>
     ),
   },
